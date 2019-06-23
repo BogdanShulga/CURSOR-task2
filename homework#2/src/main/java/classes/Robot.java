@@ -1,4 +1,6 @@
-package classes;
+package main.java.classes;
+
+import main.java.interfaces.Failureable;
 
 import java.util.Random;
 

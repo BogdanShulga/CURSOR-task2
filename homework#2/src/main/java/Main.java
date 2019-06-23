@@ -1,4 +1,7 @@
-import classes.*;
+package main.java;
+
+import main.java.classes.*;
+import main.java.interfaces.Failureable;
 
 import java.util.Scanner;
 

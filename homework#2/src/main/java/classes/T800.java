@@ -1,29 +1,29 @@
-package classes;
+package main.java.classes;
 
 import java.util.Random;
 
-public class Robocop extends Robot {
+public class T800 extends Robocop {
 
-    private String name = "Robocop";
+    private String name = "T800";
 
-    private String armor = "super armor";
+    private String armor = "super duper armor";
 
     @Override
     public void shoot() {
         failure();
-        System.out.println("Bang-bang-bang!");
+        System.out.println("Kaboom-kaboom-kaboom!");
     }
 
     @Override
     public void shoutOut() {
         failure();
-        System.out.println("Stand still, don't move, I'm a cop!");
+        System.out.println("I need your clothes!");
     }
 
     @Override
     public void move() {
         failure();
-        System.out.println("I approach you, do not be afraid!");
+        System.out.println("I'm going to protect Sara and Jone Connor!");
     }
 
     @Override
@@ -33,11 +33,11 @@ public class Robocop extends Robot {
         int k = random.nextInt(12) + 1;
 
         if (k <= 3) {
-            System.out.println("Robocop now in blue form");
+            System.out.println("T800 now without clothing");
         } else if (k >= 4 && k <= 8) {
-            System.out.println("Robocop now in white form");
+            System.out.println("T800 now in black glasses and without clothes");
         } else {
-            System.out.println("Robocop now in black form");
+            System.out.println("T800 now in black glasses and leather clothes");
         }
     }
 
@@ -50,7 +50,7 @@ public class Robocop extends Robot {
     public void failure() {
         Random r = new Random();
         if (r.nextInt(6) == 2) {
-            System.out.println("You are all a virus, you all must die! Bang-bang-bang!");
+            System.out.println("You are all a virus, you all must die! Kaboom-kaboom-kaboom!");
             System.exit(0);
         } else {
             System.out.println("I'm working properly!");
@@ -62,7 +62,7 @@ public class Robocop extends Robot {
     }
 
     public void setName(String name) {
-        System.out.println("Ha ha! I am a robot with a super armor, you can't change me!");
+        System.out.println("Ha ha! I am a robot with a super duper armor, you can't change me!");
     }
 
     @Override
@@ -72,6 +72,10 @@ public class Robocop extends Robot {
 
     @Override
     public void setArmor(String armor) {
-        System.out.println("Ha ha! I am a robot with a super armor, you can't change me!");
+        System.out.println("Ha ha! I am a robot with a super duper armor, you can't change me!");
+    }
+
+    public void killT1000() {
+        System.out.println("KabooOOOOoom! Astalavista babe!");
     }
 }
