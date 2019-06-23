@@ -1,7 +1,4 @@
-import classes.Failureable;
-import classes.Robocop;
-import classes.Robot;
-import classes.T800;
+import classes.*;
 
 import java.util.Scanner;
 
@@ -43,6 +40,8 @@ public class Main {
             } else {
                 System.out.println("You entered incorrect data!");
             }
+
+            new PlanetAdapter().adapt(robot);
 
             while (!stop) {
                 System.out.println();
@@ -92,7 +91,7 @@ public class Main {
                     stop = true;
                     continue;
                 } else if (action == 9) {
-                    failureableRobot = (Failureable)robot;
+                    failureableRobot = (Failureable) robot;
                     failureableRobot.failure();
                 } else if (robot instanceof T800 && action == 10) {
                     ((T800) robot).killT1000();

@@ -2,11 +2,13 @@ package classes;
 
 import java.util.Random;
 
-public class Robot implements Failureable{
+public class Robot implements Failureable {
 
     private String name = "Robot";
 
     private String armor = "armor";
+
+    private String adaptivArmor = "";
 
     public void shoot() {
         failure();
@@ -37,7 +39,7 @@ public class Robot implements Failureable{
         }
     }
 
-    public void failure(){
+    public void failure() {
         Random r = new Random();
         if (r.nextInt(6) == 2) {
             System.out.println("You are all a virus, you all must die!");
@@ -66,5 +68,13 @@ public class Robot implements Failureable{
 
     public void setArmor(String armor) {
         System.out.println("Ha ha! I am a robot with an armor, you can't change me!");
+    }
+
+    public void setAdaptivArmor(String adaptivArmor) {
+        this.adaptivArmor = adaptivArmor;
+    }
+
+    public String getAdaptivArmor() {
+        return adaptivArmor;
     }
 }
