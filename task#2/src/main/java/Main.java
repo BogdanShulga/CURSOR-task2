@@ -29,6 +29,7 @@ public class Main {
             } catch (java.util.InputMismatchException ex) {
                 System.out.println("You entered incorrect data!");
                 in.nextLine();
+                continue;
             }
 
             if (action == 1) {
@@ -42,6 +43,7 @@ public class Main {
                 continue;
             } else {
                 System.out.println("You entered incorrect data!");
+                continue;
             }
 
             new PlanetAdapter().adapt(robot);
@@ -70,6 +72,7 @@ public class Main {
                 } catch (java.util.InputMismatchException ex) {
                     System.out.println("You entered incorrect data!");
                     in.nextLine();
+                    continue;
                 }
 
                 if (action == 1) {
@@ -100,6 +103,7 @@ public class Main {
                     ((T800) robot).killT1000();
                 } else {
                     System.out.println("You entered incorrect data!");
+                    continue;
                 }
             }
         }

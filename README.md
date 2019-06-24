@@ -1,2 +1,1 @@
-# homework
-Homework on CURSOR
+![Homework on CURSOR](img/face.jpg)
