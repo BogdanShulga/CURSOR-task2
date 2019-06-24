@@ -34,7 +34,7 @@ public class T800 extends Robocop {
 
         if (k <= 3) {
             System.out.println("T800 now without clothing");
-        } else if (k >= 4 && k <= 8) {
+        } else if (k <= 8) {
             System.out.println("T800 now in black glasses and without clothes");
         } else {
             System.out.println("T800 now in black glasses and leather clothes");

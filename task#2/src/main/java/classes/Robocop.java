@@ -34,7 +34,7 @@ public class Robocop extends Robot {
 
         if (k <= 3) {
             System.out.println("Robocop now in blue form");
-        } else if (k >= 4 && k <= 8) {
+        } else if (k <= 8) {
             System.out.println("Robocop now in white form");
         } else {
             System.out.println("Robocop now in black form");

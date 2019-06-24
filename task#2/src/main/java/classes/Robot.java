@@ -34,7 +34,7 @@ public class Robot implements Failureable {
 
         if (k <= 3) {
             System.out.println("Robot now in form 1");
-        } else if (k >= 4 && k <= 8) {
+        } else if (k <= 8) {
             System.out.println("Robot now in form 2");
         } else {
             System.out.println("Robot now in form 3");

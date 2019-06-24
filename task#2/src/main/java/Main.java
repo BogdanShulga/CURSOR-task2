@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Failureable failureableRobot = null;
-        int action = 0;
+        Failureable failureableRobot;
+        int action;
         Scanner in = new Scanner(System.in);
         boolean stop = false;
-        Robot robot = null;
+        Robot robot;
 
         System.out.println("Hi! It is a robot control center.");
 
@@ -59,9 +59,7 @@ public class Main {
                 System.out.println("6 + enter - to change an armor of the " + robot);
                 System.out.println("7 + enter - to go to previous menu");
                 System.out.println("8 + enter - to quit");
-                if (robot instanceof Failureable) {
-                    System.out.println("9 + enter - to test the " + robot);
-                }
+                System.out.println("9 + enter - to test the " + robot);
                 if (robot instanceof T800) {
                     System.out.println("10 + enter - to kill T1000");
                 }
