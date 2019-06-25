@@ -93,7 +93,6 @@ public class Main {
                     break;
                 } else if (action == 8) {
                     stop = true;
-                    continue;
                 } else if (action == 9) {
                     failureableRobot = robot;
                     failureableRobot.failure();
