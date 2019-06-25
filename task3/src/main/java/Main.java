@@ -27,7 +27,6 @@ public class Main {
 
         int[] array = {1, -5, 0, 3, -7, 9};
 
-
         System.out.println("The sum of all positive numbers in array " + Arrays.toString(array) + " = " + ArrayHandler.posSum(array));
 
         System.out.println(ArrayHandler.average(array));
