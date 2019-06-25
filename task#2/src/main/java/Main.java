@@ -95,13 +95,12 @@ public class Main {
                     stop = true;
                     continue;
                 } else if (action == 9) {
-                    failureableRobot = (Failureable) robot;
+                    failureableRobot = robot;
                     failureableRobot.failure();
                 } else if (robot instanceof T800 && action == 10) {
                     ((T800) robot).killT1000();
                 } else {
                     System.out.println("You entered incorrect data!");
-                    continue;
                 }
             }
         }
