@@ -1,34 +1,23 @@
 package main.java.classes;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
 public class ArrayListHandler {
     public static void replaceValues(List<String> list, String from, String to) {
+        System.out.println("ArrayList with wrong value: " + list);
         ListIterator<String> iterator = list.listIterator();
         while (iterator.hasNext()) {
-            String next = iterator.next();
-            if (next.equals(from)) {
+            if (iterator.next().equals(from)) {
                 iterator.set(to);
             }
         }
-    }
-
-    public static <T> String toStringList(List<T> list) {
-        StringBuilder b = new StringBuilder();
-        Iterator<T> iterator = list.listIterator();
-        b.append('{');
-        b.append(iterator.next());
-        while (iterator.hasNext()) {
-            b.append(", ");
-            b.append(iterator.next());
-        }
-        b.append('}');
-        return b.toString();
+        System.out.println("Replaced value \"Tree\" by \"Three\": " + list);
     }
 
     public static void removeDivisibleByThree(List<Integer> list) {
+        System.out.println("list before: " + list);
         list.removeIf(integer -> integer % 3 == 0);
+        System.out.println("and list after removing all numbers which are divisible by 3: " + list);
     }
 }

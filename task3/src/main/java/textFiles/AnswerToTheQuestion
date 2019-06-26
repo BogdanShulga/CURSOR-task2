@@ -1,0 +1,7 @@
+Q: Why arrays in java initialize with fixed size and can`t be dynamic?
+
+A: Static arrays, like other static data types, are objects whose size is known at compile time.
+Therefore these arrays need to be initialized at the compile time. The compiler generates instructions (decisions)
+to allocate memory somehow at runtime for data, and at runtime, your code can not change or modify its decisions.
+If it decided it needed 50 bytes at compile time, at runtime, you can't make it decide to allocate 60 -- that
+decision has already been made.

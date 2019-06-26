@@ -1,39 +1,31 @@
 package main.java.classes;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class ArrayHandler {
-    public static void bubbleReverseOrder(Integer[] arr) {
-        for (int i = arr.length - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int tmp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = tmp;
-                }
-            }
-        }
+    public static void reverseOrder(Integer[] arr) {
+        System.out.println("Unsorted array: " + Arrays.toString(arr));
+        Arrays.sort(arr, Comparator.reverseOrder());
+        System.out.println("Sorted in revers order array: " + Arrays.toString(arr));
     }
 
-    public static int posSum(int[] array) {
+    public static void posSum(int[] array) {
         int sum = 0;
         for (int i : array) {
             if (i > 0) {
                 sum += i;
             }
         }
-        return sum;
+        System.out.println("The sum of all positive numbers in array " + Arrays.toString(array) + " = " + sum);
     }
 
-    public static String average(int[] array) {
-        int count = 0;
+    public static void average(int[] array) {
         int sum = 0;
         for (int i : array) {
             sum += i;
-            count++;
         }
-        double average;
-        if (count != 0) {
-            average = sum / count;
-        } else average = 0;
+        double average = sum / array.length;
 
         int iMax = array.length - 1;
         StringBuilder b = new StringBuilder();
@@ -46,7 +38,6 @@ public class ArrayHandler {
             }
             b.append(", ");
         }
-
-        return "array" + b.toString() + " -> avg = " + average;
+        System.out.println("array" + b.toString() + " -> avg = " + average);
     }
 }
